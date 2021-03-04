@@ -87,10 +87,10 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 20,
     marginVertical: 10,
+    fontFamily: "open-sans-bold",
   },
   button: {
     width: 100,
-
   },
   buttonContainer: {
     flexDirection: "row",
