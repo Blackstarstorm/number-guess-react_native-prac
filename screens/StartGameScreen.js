@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, Button, TouchableWithoutFeedback, Keyboard, Ale
 import Card from "../components/Card";
 import Input from "../components/Input";
 import Colors from "../constants/colors";
+import BodyText from "../components/BodyText";
+import TitleText from "../components/TitleText";
 import NumberContainer from "../components/NumberContainer";
 
 const StartGameScreen = props => {
@@ -36,7 +38,7 @@ const StartGameScreen = props => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.summaryContainer}>
-        <Text>Chosen Number</Text>
+        <BodyText>Chosen Number</BodyText>
         <NumberContainer>
           {selectedNumber}
         </NumberContainer>
@@ -50,9 +52,9 @@ const StartGameScreen = props => {
       Keyboard.dismiss();
   }}>
     <View style={styles.screen}>
-      <Text style={styles.header}>Start a New Game!</Text>
+      <TitleText style={styles.title}>Start a New Game!</TitleText>
         <Card style={styles.inputContainer}>
-          <Text>Select A Number!</Text>
+          <BodyText>Select A Number!</BodyText>
         <Input
           styles={style.input}
           blurOnSubmit
@@ -84,13 +86,13 @@ const styles = StyleSheet.create({
     padding: 10,
     alignItems: "center"
   },
-  header: {
-    fontSize: 20,
-    marginVertical: 10,
-    fontFamily: "open-sans-bold",
-  },
   button: {
     width: 100,
+  },
+  title: {
+    fontSize: 20,
+    marginVertical: 10,
+    fontFamily: "open-sans-bold"
   },
   buttonContainer: {
     flexDirection: "row",
@@ -110,6 +112,9 @@ const styles = StyleSheet.create({
   summaryContainer: {
     marginTop: 20,
     alignItems: "center"
+  },
+  text: {
+    fontFamily:"open-sans"
   }
 });
 
